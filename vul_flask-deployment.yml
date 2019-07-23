@@ -16,7 +16,7 @@ spec:
         app: vul-flask
     spec:
       containers:
-      - image: registry.gitlab.com/_USER_/test-ci:staging
+      - image: registry.gitlab.com/_USER_/kubernetes-ci:staging
         imagePullPolicy: Always
         name: vul-flask
         ports:
