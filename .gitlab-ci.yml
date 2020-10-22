@@ -28,10 +28,10 @@ sca_scan:
     - docker:stable-dind
   script:
     - apk add py-pip
-    - pip install safety PyJWT==1.5.2 requests==2.18.1 urllib3==1.21.1 itsdangerous==0.24 Jinja2==2.9.6
-    - safety check --json >> safety_result.json || true
+    - pip install pyraider PyJWT==1.5.2 requests==2.18.1 urllib3==1.21.1 itsdangerous==0.24 Jinja2==2.9.6
+    - pyraider go -e json result.json
   artifacts:
-    paths: [safety_result.json]
+    paths: [pyraider_result.json]
     expire_in: 1 week
 
 docker_build:
