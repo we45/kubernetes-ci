@@ -29,7 +29,7 @@ sca_scan:
   script:
     - apk add py-pip
     - pip install pyraider PyJWT==1.5.2 requests==2.18.1 urllib3==1.21.1 itsdangerous==0.24 Jinja2==2.9.6
-    - pyraider go -e json result.json
+    - pyraider go -e json pyraider_result.json
   artifacts:
     paths: [pyraider_result.json]
     expire_in: 1 week
